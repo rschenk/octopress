@@ -12,7 +12,7 @@ categories:
 
 [Synynyms](http://synynyms.com) is an award-winning tool that I wrote for visualizing the scientific names of species. You see, most species don't just have one scientific name, they typically have many, which are sometimes hotly contested! Synynyms graphs the popularity of each these names through time, as can be seen in the graphs below of the American Bison, which changed names from _Bos bison_ to _Bison bison_ in the early 20th Century.
 
-[![](http://ryanschenk.com/wp-content/uploads/2011/12/Bison-bison-Linnaeus-1758-synynyms-1024x675.png)](http://synynyms.com/taxon/328109)
+[ {% img /images/2011-12-03-synynyms/Bison-bison-Linnaeus-1758-synynyms-1024x675.png %} ](http://synynyms.com/taxon/328109)
 
 Synynyms ties together the APIs of three important biodiversity informatics projects. The names and taxonomic synonyms themselves come from the [Encyclopedia of Life](http://eol.org), those names are parsed into their components by the [Global Names Index](http://gni.globalnames.org/parsers/new), and most importantly of all, the publication occurrences come from the [Biodiversity Heritage Library](http://www.biodiversitylibrary.org/).
 
