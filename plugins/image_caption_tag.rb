@@ -28,7 +28,8 @@ module Jekyll
     def render(context)
       output = super
       if @img
-        "<span class='#{('caption-wrapper ' + @class).rstrip}' width='#{@width}'>" +
+        wrapper_width = @width ? "style='width: #{@width}px;'" : ''
+        "<span class='#{('caption-wrapper ' + @class).rstrip}' #{wrapper_width} >" +
           "<img class='caption' src='#{@img}' width='#{@width}' height='#{@height}' title='#{@title}'>" +
           "<span class='caption-text'>#{@title}</span>" +
         "</span>"
