@@ -8,7 +8,7 @@ title: About
 wordpress_id: 2
 ---
 
-[caption id="attachment_356" align="alignleft" width="239"][![](http://ryanschenk.com/wp-content/uploads/2008/08/ryan-at-the-knob.jpg)](http://ryanschenk.com/wp-content/uploads/2008/08/ryan-at-the-knob.jpg) Great photo by my friend [Stacey Hedman](http://staceyhedman.com)[/caption]
+{% imgcap left /images/about/ryan-at-the-knob.jpg 239 360 Great photo by [Stacey Hedman](http://staceyhedman.com) %}
 
 Hi there. My name is Ryan, and I am a well-rounded software developer, with a specialty in working with data. I have worked at Onset Computer Corporation, the world leader in data loggers, and for the scientific data repository at the MBL/WHOI Library. I enjoy figuring out how to store and process large amounts of data, but what I really love is making interfaces to explore this data in an elegant way. Once I  even turned scientific data into a gigantic interactive sculpture installation made of silk. ([Really](http://ryanschenk.com/2010/11/taxatron/)!)
 
