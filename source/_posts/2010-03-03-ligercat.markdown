@@ -1,0 +1,36 @@
+---
+author: admin
+comments: true
+date: 2010-03-03 02:40:59+00:00
+layout: post
+slug: ligercat
+title: LigerCat
+wordpress_id: 334
+categories:
+- Development
+---
+
+[LigerCat](http://ligercat.org)--Literature and Genomics Resource Catalogue--is a Web application that provides a big-picture view of the National Library of Medicine's Medline database. It allows researchers to browse the metadata of hundreds of thousands, even millions, of biomedical journal articles simultaneously. It also has the coolest name of any scientific application that has been published in peer review.
+
+![](http://ryanschenk.com/wp-content/uploads/2010/03/LigerCat1-1024x668.png)
+
+It is a Ruby on Rails application that I wrote when I was at the Marine Biological Laboratory. I designed and implemented the entire application stack from the ground up. The data is split between a MySQL database and a Redis cluster; the Redis cluster, which stores hundreds of millions values, was the largest in the world at the time it was built. To compute queries on demand, it has a large, horizontally scalable processing cluster, which pull tasks from an AMQP work queue and process them in parallel. Using this architecture, I processed each of the 1.9 million species in the Encyclopedia of Life though LigerCat, analyzing the metadata of tens of millions of scholarly articles, in a matter of days.
+
+The basic idea behind LigerCat is that tagging is nothing new. The Web 2.0 folks got the idea from librarians, who have been tagging literature for many years. Librarians tag things using a "controlled vocabulary," which is a set of tags that are curated and maintained by some authoratative body. For instance, scientific articles indexed by the National Library of Medicine are tagged with a controlled vocabulary called Medical Subject Headings (MeSH), which has over 20,000 tags in the set.
+
+![](http://ryanschenk.com/wp-content/uploads/2010/03/Shimomura-O-LigerCat1-951x1024.png)
+
+The Articles search, which is selected by default, allows the user to query the PubMed article database. Ligercat will download all the results, and build a MeSH tag cloud from the articles returned by your search. You can search for a [topic](http://ligercat.ubio.org/articles/biodiversity%20informatics), a [person](http://ligercat.ubio.org/articles/Shimomura%20O), or an [organism](http://ligercat.ubio.org/articles/Cavia%20porcellus), and LigerCat will build you a MeSH cloud based on the results.
+
+In addition to designing the databases and writing the application code, I also designed and coded the UI. LigerCat has extensive client-side interaction that I developed with MooTools. The page below allows users to visually construct queries to the PubMed repository by clicking on interface elements. As the user clicks, LigerCat queries PubMed in realtime, providing instant on-screen feedback. The publication timeline at the bottom is fully interactive and is implemented entirely in CSS, no JavaScript (admittedly pedantic). I have been contacted by Dryad, Agricola, and Elsevier, who have wanted to use LigerCat’s interface to display their metadata. Because I designed LigerCat’s processing system based on the Strategy and Command design patterns, placing LigerCat on top of another literature corpus is as easy as writing two Strategy classes.
+
+[![](http://ryanschenk.com/wp-content/uploads/2010/03/Shimomura-O-LigerCat-951x1024.png)](http://ligercat.org/articles/shimomura%20o)
+
+LigerCat can be cited as,
+
+
+
+<blockquote>LigerCat: using “MeSH Clouds” from journal, article, or gene citations to facilitate the identification of relevant biomedical literature. Sarkar IN, Schenk R, Miller H, Norton CN. AMIA Annu Symp Proc. 2009 Nov 14;2009:563-7.</blockquote>
+
+
+

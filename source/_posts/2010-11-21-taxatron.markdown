@@ -1,0 +1,47 @@
+---
+author: admin
+comments: true
+date: 2010-11-21 22:28:00+00:00
+layout: post
+slug: taxatron
+title: Taxatron
+wordpress_id: 220
+---
+
+As I work with scientific data, I am always seeking different ways of displaying it. Recently, I've been trying to create juxtapositions, trying to display scientific data in very "unscientific" ways. I built Taxatron as the ultimate extension of this thinking: a kinetic sculpture that displays graphs of scientific data with a 24' long piece of purple silk chiffon. 
+
+[![](http://farm7.staticflickr.com/6048/6379561725_86da60459f.jpg)](http://www.flickr.com/photos/ryanschenk/6379561725/)
+
+The purple silk represents a timeline from 1750 to 2000. It displays a histogram of the number of new species discovered per year in any particular grouping of organisms (called "taxa"). In the image above, we can see the number of new species of octopus discovered every year.  There are two major spikes in the early Twentieth Century, which correspond to two major published volumes on mollusks. In the video below, we can see the number of new turtles, birds, and rodents discovered per year since Linnaeus first described species in 1750. The silk moves beautifully as it transitions from one species to another. 
+ 
+
+
+[Taxatron Prototype](http://vimeo.com/15444575) from [Ryan Schenk](http://vimeo.com/ryanschenk) on [Vimeo](http://vimeo.com).
+
+
+
+The chiffon creates an entirely new setting for the scholarly data that Taxatron displays. Taxatron recontextualizes "hard science" data into something soft, translucent, and easily mutable. Taken out of the safety of a hard glass computer screen, or the comfort of a poster session, the data is vulnerable, suspended for viewers to inspect from any angle, and even to be buffeted by a strong wind.
+
+
+
+Lately, there has been much ado about "transparency" in regards to data. Taxatron takes this charge literally. Light easily passes through the cloth, allowing viewers to visually interact with each other, and allowing the projected metadata to radiate through the cloth, wholly becoming part of the medium. The material selection also plays a pivotal role in the movement of the graphs, effortlessly transforming from one shape to another, and raising important questions about the permanence or fleetingness of scientific discovery and the organisms that inhabit our planet.
+
+[![](http://farm7.staticflickr.com/6238/6379695081_651c39e6e0.jpg)](http://www.flickr.com/photos/ryanschenk/6379695081/)
+
+Taxatron was displayed at the TDWG 2010 conference in Woods Hole, and again at TEDxWoodsHole. Receptions at both events allowed scientists and nonscientist alike to view, discuss, and even touch scholarly data. I think my favorite part of the event was hearing the librarians and archivists from the MBLWHOI Library correlate spikes in the histograms with the influential monographs that described those species. 
+
+[![](http://farm7.staticflickr.com/6031/6379770149_d48cc4c59b.jpg)](http://www.flickr.com/photos/ryanschenk/6379770149/)
+
+From a technical standpoint, the chiffon is suspended from an array of 15 stepper motors, which are mounted to a housing hung from the ceiling. With the help of an electrical engineer friend, I created custom circuit boards that contain the driver circuit, stepper motor mount, and a photo switch used to calibrate the system. The chiffon is suspended from a strand of thread, attached to a small pulley mounted on the stepper motor. 
+
+[![](http://farm7.staticflickr.com/6056/6379502829_d204267699.jpg)](http://www.flickr.com/photos/ryanschenk/6379502829/)
+
+Inside the housing, I fabricated mounting brackets from sheet metal to hold the stepper motor boards in place. All the steppers are wired to an Arduino Mega, which runs the show. I wrote firmware in the Arduino to drive the motors given commands from the serial port. Every time the sculpture powers on, it calibrates itself with the photo switches on each motor board; this allows me to use any length of string to suspend the cloth; the sculpture will scale the measurements accordingly.
+
+[![](http://farm7.staticflickr.com/6220/6379491683_1a7a88ec4d.jpg)](http://www.flickr.com/photos/ryanschenk/6379491683/)
+
+The stepper motors can move the silk into a wide variety of shapes by spooling the thread around a pulley, thus shortening or lengthening the thread suspending each segment of cloth.
+
+[![](http://farm7.staticflickr.com/6059/6379449071_a87512ca31.jpg)](http://www.flickr.com/photos/ryanschenk/6379449071/)
+
+Taxatron hung at TDWG 2010 and TEDxWoodsHole 2010; unfortunately, both events were extremely short, and I was not able to push the limits of what Taxatron can do because of its temporary location. As you can tell, I barely had time to snap a few photos. I am looking for a home for Taxatron that would allow it to hang for an extended period of time, and allow me to fully develop the projection software to transform the cloth into a unique and truly memorable experience.
